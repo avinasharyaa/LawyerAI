@@ -1,0 +1,2 @@
+# LawyerAI
+THIS IS MY PLATFORM
