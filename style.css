@@ -1,0 +1,138 @@
+:root {
+  color-scheme: dark;
+  --bg: #07111f;
+  --panel: rgba(9, 19, 35, 0.82);
+  --text: #f5f7ff;
+  --muted: #9fb0d2;
+  --accent: #5ee7ff;
+  --accent-2: #7f5cff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--text);
+  background: radial-gradient(circle at top left, #162845 0%, var(--bg) 55%, #030812 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.background-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.glow-one {
+  width: 280px;
+  height: 280px;
+  background: var(--accent);
+  top: -70px;
+  left: -60px;
+}
+
+.glow-two {
+  width: 320px;
+  height: 320px;
+  background: var(--accent-2);
+  bottom: -90px;
+  right: -80px;
+}
+
+.hero-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 760px);
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--panel);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #bdefff;
+  background: rgba(94, 231, 255, 0.12);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.04rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.countdown-card {
+  padding: 18px 10px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.countdown-card span {
+  display: block;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.countdown-card small {
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+}
+
+.status {
+  margin-top: 22px;
+  font-weight: 600;
+  color: #e9faff;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 16px;
+  }
+
+  .hero-card {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .countdown {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

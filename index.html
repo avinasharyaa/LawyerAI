@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lawyer AI Countdown</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="faviconc.png" />
+  </head>
+  <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="hero-card">
+      <p class="eyebrow">Launch countdown</p>
+      <h1>Lawyer AI</h1>
+      <p class="subtitle">
+        Lunch is planned for 29 July, and this beautiful countdown is now ready for you.
+      </p>
+
+      <div class="countdown" aria-label="Countdown to launch">
+        <div class="countdown-card">
+          <span id="days">00</span>
+          <small>Days</small>
+        </div>
+        <div class="countdown-card">
+          <span id="hours">00</span>
+          <small>Hours</small>
+        </div>
+        <div class="countdown-card">
+          <span id="minutes">00</span>
+          <small>Minutes</small>
+        </div>
+        <div class="countdown-card">
+          <span id="seconds">00</span>
+          <small>Seconds</small>
+        </div>
+      </div>
+
+      <p id="status" class="status">The countdown has started.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
